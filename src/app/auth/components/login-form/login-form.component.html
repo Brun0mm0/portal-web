@@ -1,0 +1,33 @@
+<form [formGroup]="loginForm" class="form-login">
+    <div class="form-login-inputs">
+        <div class="form-floating">
+            <input type="text" 
+            class="form-control" 
+            formControlName="usuario"
+            placeholder="Ingrese Usuario o Dni"
+            id="floating-usuario">
+            <label for="floating-usuario" 
+            class="floatingInput">
+            Usuario
+        </label>
+    </div>
+    <div class="form-floating pb-3">
+        <input type="text" 
+        placeholder="Ingrese su contraseña"
+        formControlName="pass"
+        class="form-control"
+        id="floating-pass">
+        <label for="floating-pass" 
+        class="form-label">
+        Contraseña
+        </label>
+        <small class="ms-2 mt-2">
+            <a routerLink="../recover">Recuperar Contraseña</a>
+        </small>
+    </div>
+        <button class="btn btn-primary btn-lg">Ingresar</button>
+    </div>
+    <div class="d-flex flex-column align-items-center justify-content-center pt-5">
+        <a routerLink="../signin">Crear Usuario</a>
+    </div>
+</form>
