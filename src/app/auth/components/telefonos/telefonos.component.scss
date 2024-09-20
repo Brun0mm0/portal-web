@@ -1,3 +1,6 @@
+$azul-logo: #009ADA;
+$urgencias: #F20000;
+$verde-logo: #02B57E;
 .telefonos {
     &__modal {
         position: absolute;
@@ -7,15 +10,18 @@
         height: 100%;
         background-color: rgba(0,0,0,0.4);
         z-index: 100;
-        padding: 5rem 40rem;
+        padding: 5rem 0;
+        
         &-dialog {
+            margin: 0 auto;
+            width: 35rem;
             height: 100%;
             background-color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 1rem;
-            padding: 2rem 5rem;
+            padding: 2rem 7rem;
         }
         &-content {
             width: 100%;
@@ -25,7 +31,6 @@
         }
         &-title {
             text-transform: capitalize;
-            padding-bottom: 2rem;
             & h1 {
                 font-size: 2rem;
             }
@@ -41,23 +46,48 @@
             font-weight: 600;
             & .titulo {
                 text-transform: uppercase;
+                margin-bottom: .5rem;
             }
+            & .item {
+                display: flex;
+                height: 2.8rem;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 1rem;
+                border: solid 2px $azul-logo;
+                border-radius: .8rem;
+                margin-bottom: 1rem;
+                cursor: pointer;
+                transform: all 1s;
+                & .fa {
+                    display: flex;
+                    align-items: center;
+                    color: $azul-logo;
+                }
+                & p {
+                    font-weight: 600;
+                    color: $azul-logo;
+                }
+            }
+            
+            
             & .subtitulo {
-                text-transform: capitalize;
-                align-self: flex-end;
-                padding-right: .5rem;
+                text-transform: uppercase;
+                font-size: .8rem;
+                padding-left: 1rem;
+                margin: 0;
+                font-weight: 400;
             }
             & .contacto {
+                display: block;
+                margin: 0;
+                padding: 0;
                 font-weight: 400;
-                align-self: flex-end;
                 font-size: 1.3rem;
-                &-link {
-                    align-self: flex-end;
-                }
             }
             & .direccion {
                 text-transform: capitalize;
-                align-self: flex-end;
+                margin: 0;
                 & span {
                     text-transform: uppercase;
                 }
@@ -67,4 +97,57 @@
         &-footer{}
 
     }   
+}
+
+.urgencias {   
+    border-color: $urgencias !important;
+    & .contacto {
+        color: $urgencias !important;
+    }
+    & .fa {
+        color: $urgencias !important;
+    }
+}
+.urgencias:hover {
+    background: $urgencias !important;
+}
+.salud-mental {
+    border-color: $verde-logo !important;
+    & .contacto {
+        color: $verde-logo !important;
+    }
+    & .fa {
+        color: $verde-logo !important;
+    }
+}
+
+.item:hover {
+    background: $azul-logo;
+    // background: linear-gradient(35deg, rgba(0,103,218,1) 0%, rgba(0,154,218,1) 28%, rgba(2,181,126,1) 91%);
+    background: linear-gradient(45deg, rgba(0,154,218,1) 5%, rgba(84,184,227,1) 38%, rgba(2,181,126,1) 95%);
+    & .contacto {
+        color: #fff !important;
+    }
+    & .fa {
+        color: #fff !important;
+    }
+}
+
+.urgencias:hover {
+    background-color: $urgencias !important;
+}
+
+.salud-mental:hover {
+    background: $verde-logo !important;
+    & a {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.odontologia:hover {
+    background: $azul-logo !important;
+    & p {
+        color: #fff !important;
+    }
 }

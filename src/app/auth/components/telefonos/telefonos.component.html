@@ -8,29 +8,53 @@
             </div>
             <!-- <hr> -->
             <div class="telefonos__modal-body">
-                <div class="telefonos__modal-contacto">
+                <!-- FIXME: OSSSB -->
+                <div class="telefonos__modal-contacto" (click)="navegar('https://wa.me/+5491127610695')">
                     <p class="titulo">osssb</p>
-                    <p class="contacto">11-2761-0695</p>
+                    <div class="item">
+                        <i class="fa-brands fa-whatsapp fa-xl fa"></i>
+                        <p class="contacto">11-2761-0695</p>
+                    </div>
                 </div>
-                <hr>
+                <!-- FIXME: Urgencias -->
                 <div class="telefonos__modal-contacto">
                     <p class="titulo">urgencias y emergencias</p>
-                    <p class="contacto">0800-555-6722</p>
-                    <p class="contacto">0810-888-3226</p>
+                    <div class="item urgencias" (click)="navegar('tel:08005556722')">
+                        <i class="fa-solid fa-phone fa-lg fa"></i>
+                        <p class="contacto">0800-555-6722</p>
+                    </div>
+                    <div class="item urgencias" (click)="navegar('tel:08108883226')">
+                        <i class="fa-solid fa-phone fa-lg fa"></i>
+                        <p class="contacto">0810-888-3226</p>
+                    </div>
                 </div>
-                <hr>
+                <!-- FIXME: Salud Mental -->
                 <div class="telefonos__modal-contacto">
                     <p class="titulo">salud mental</p>
-                    <a href="" class="contacto-link">formularias appsi</a>
-                    <p class="contacto">11-6374-4900</p>
+                    <div class="item salud-mental" (click)="navegar('https://turnos.redappsi.com.ar/solicitud_publica/formulario')">
+                        <i class="fa-solid fa-paperclip fa-lg fa"></i>
+                        <a href="">formularias appsi</a>
+                    </div>
+                    <div class="item salud-mental" style="margin-bottom: .5rem;" (click)="navegar('https://wa.me/+5491163744900')">
+                        <i class="fa-brands fa-whatsapp fa-xl fa"></i>
+                        <p class="contacto">11-6374-4900</p>
+                    </div>
                     <p class="subtitulo">atención las 24hs</p>
-                    <p class="contacto">11-2257-2258</p>
+                    <div class="item salud-mental" (click)="navegar('https://wa.me/+5491122572258')">
+                        <i class="fa-brands fa-whatsapp fa-xl fa"></i>
+                        <p class="contacto">11-2257-2258</p>
+                    </div>
                 </div>
-                <hr>
                 <div class="telefonos__modal-contacto">
                     <p class="titulo">guardia odontológica las 24hs - s.i.a.c.o</p>
-                    <p class="contacto">5252-3400</p>
-                    <p class="direccion">sarmiento 746 - <span>caba</span></p>
+                    <div class="item odontologia" (click)="navegar('tel:52523400')">
+                        <i class="fa-solid fa-phone fa-lg fa"></i>
+                        <p class="contacto">5252-3400</p>
+                    </div>
+                    <div class="item odontologia" (click)="navegar('https://maps.app.goo.gl/WqLPtw2voxNusn6e7')">
+                        <i class="fa-solid fa-location-dot fa-lg fa"></i>
+                        <p class="direccion">sarmiento 746 - <span>caba</span></p>
+                    </div>
                 </div>
             </div>
             <div class="telefonos__modal-footer"></div>
